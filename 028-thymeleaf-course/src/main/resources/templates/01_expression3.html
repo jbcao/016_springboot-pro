@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>链接表达式</h3>
+<p>链接到绝对地址</p>
+<a th:href="@{http://www.baidu.com}">baidu</a>
+<h3>链接到相对地址</h3>
+<a th:href="@{/tpl/queryAccount}">相对地址，没有参数</a>
+<h3>使用相对地址，传递参数</h3>
+<a th:href="@{'/tpl/queryAccount?id='+${stuId}}">相对地址传递参数</a>
+<h3>推荐使用的参数传递方式</h3>
+<a th:href="@{/tpl/queryAccount(id=${stuId})}">推荐方式，</a>
+<h3>传递多个参数</h3>
+<a th:href="@{/tpl/queryUser(name='lisi',age=20)}">推荐方式，传递多个参数</a>
+</body>
+</html> 

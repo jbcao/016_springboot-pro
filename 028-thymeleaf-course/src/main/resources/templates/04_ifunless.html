@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3>if使用</h3>
+    <p th:if="${sex=='m'}">性别是男</p>
+    <p th:if="${isLogin}">已经登录</p>
+    <p th:if="${age>10}">年龄大于10</p>
+    <p th:if="${name}">no name</p>
+    <p th:if="${isOld}"> null</p>
+    <br>
+    <br>
+    <h3>unless使用 为false显示</h3>
+    <p th:unless="${sex=='f'}">性别是男</p>
+    <p th:unless="${isLogin}">isLogin</p>
+    <p th:unless="${isOld}">is null</p>
+</div>
+
+</body>
+</html>

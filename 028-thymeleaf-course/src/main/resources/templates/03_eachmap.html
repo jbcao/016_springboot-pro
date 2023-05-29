@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <div th:each="map,userStat:${mymap}">
+        <p th:text="${map.key}"></p>
+        <p th:text="${map.value.getAge()}"></p>
+        <p th:text="${map.value.getName()}"></p>
+        <p th:text="${userStat.index}"></p>
+    </div>
+    <div th:each="map:${strmap}">
+        <p th:text="${map.key}"></p>
+        <p th:text="${map.value}"></p>
+    </div>
+    <h3>循环遍历listmap</h3>
+    <div th:each="lm:${lm}">
+        <div th:each="m:${lm}">
+            <p th:text="${m.key}"></p>
+            <p th:text="${m.value.getName()}"></p>
+            <p th:text="${m.value.getId()}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3>文字字面量</h3>
+    <p th:text="'我是'+${name}+',所在城市是'+${city}"></p>
+    <h3>数字字面量</h3>
+    <p th:if="${age>5}">年纪大于5</p>
+    <h3>boolean字面量</h3>
+    <p th:if="${isLogin==true}">登录了</p>
+    <h3>null字面量</h3>
+    <p th:if="${myuser!=null}">用户存在</p>
+</div>
+
+</body>
+</html>

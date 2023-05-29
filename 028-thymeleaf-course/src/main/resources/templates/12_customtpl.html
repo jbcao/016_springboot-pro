@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3>插入模版 </h3>
+    <div th:insert="12_head :: menu"></div>
+    <p th:include="~{12_head :: top}"></p>
+
+    <div th:insert="12_head :: menu"></div>
+    <p th:include="~{12_head :: top}"></p>
+
+    <h3>使用整个文件作为复用内容</h3>
+    <div th:include="12_footer :: html"></div>
+    <div th:include="12_footer"></div>
+
+    <div th:include="12_common/left :: html"></div>
+    <div th:include="12_common/left"></div>
+</div>
+</body>
+</html>

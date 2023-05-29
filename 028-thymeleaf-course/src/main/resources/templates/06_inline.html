@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" th:inline="javascript">
+        var name = [[${name}]];
+        var age = [[${age}]];
+
+        function fun() {
+            alert("name is" + name + " age is " + age);
+        }
+    </script>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3>内联文本</h3>
+    <div th:inline="text">
+        <p>my name is [[${name}]],my age is [[${age}]]</p>
+        my name id<span th:text="${name}"></span>,age is <span th:text="${age}"></span>
+    </div>
+    <div>
+        <p>my name is [[${name}]],my age is [[${age}]]</p>
+        my name id<span th:text="${name}"></span>,age is <span th:text="${age}"></span>
+        <input type="button" value="单击获取模板" onclick="fun()">
+    </div>
+</div>
+</body>
+</html>

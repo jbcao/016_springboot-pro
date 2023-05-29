@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3></h3>
+    <p th:text="${#request.getAttribute('requestdata')}"></p>
+    <p th:text="${#session.getAttribute('sessiondata')}"></p>
+    <p th:text="${session.loginname}"></p>
+    <h3>使用内置对象的方法</h3>
+    <span th:text="${#request.getRequestURL()}"></span><br>
+    <span th:text="${#request.getRequestURI()}"></span><br>
+    <span th:text="${#request.getQueryString()}"></span><br>
+    <span th:text="${#request.getContextPath()}"></span><br>
+    <span th:text="${#request.getServerName()}"></span><br>
+    <span th:text="${#session.getId()}"></span><br>
+    <span th:text="${param.name}"></span><br>
+    <span th:text="${param.age}"></span><br>
+    <span th:text="${param.size()}"></span><br>
+</div>
+</body>
+</html>

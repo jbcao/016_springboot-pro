@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 400px">
+    <h3>字符串连接 1.单引号方式</h3>
+    <p th:text="'我是'+${name}+'年纪'+${age}"></p>
+    <br/>
+    <br/>
+
+    <h3>字符串连接 2.||方式</h3>
+    <p th:text="|我是${name},今年${age}|"></p>
+</div>
+</body>
+</html>
